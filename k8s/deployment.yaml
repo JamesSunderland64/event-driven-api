@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-driven-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: event-driven-api
+  template:
+    metadata:
+      labels:
+        app: event-driven-api
+    spec:
+      containers:
+        - name: event-driven-api
+          image: event-driven-api:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: 8080
+            initialDelaySeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: 8080
+            initialDelaySeconds: 10
