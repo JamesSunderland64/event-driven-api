@@ -19,3 +19,26 @@ API REST desarrollada con Spring Boot implementando el patrón Event-Driven.
 ```bash
 docker build -t event-api .
 docker run -p 8082:8080 event-api
+
+
+---
+
+# 🧠 CONSEJO PRO (IMPORTANTE)
+
+Antes de entregar, asegúrate:
+
+✔️ El repo es público  
+✔️ Tiene README  
+✔️ Tiene Dockerfile  
+✔️ Tiene carpeta k8s  
+
+---
+
+# 🚀 SI ALGO FALLA
+
+Dime:
+
+👉 “me dio error en git push”  
+👉 o mándame captura  
+
+y te lo arreglo paso a paso 💥
